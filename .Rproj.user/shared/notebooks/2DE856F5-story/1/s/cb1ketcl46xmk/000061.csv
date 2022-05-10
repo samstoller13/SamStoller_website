@@ -1,0 +1,15 @@
+"0","library(ggExtra)"
+"0","c = ggplot(MLBallhitting, aes(x = BB.Percent, y = xOBP, color = AgeGroup)) +"
+"0","      geom_count(alpha = 0.5) +"
+"0","      geom_smooth(method=""lm"", se=F) +"
+"0","      scale_color_discrete(name = ""Age Group"") +"
+"0","      ggtitle(""Walk % vs xOBP (with LOBF and marginal histograms)"") +"
+"0","      xlab(""Walk %"")"
+"0",""
+"0","ggMarginal(c, type = ""histogram"", fill=""transparent"")"
+"2","`geom_smooth()` using formula 'y ~ x'
+"
+"2","`geom_smooth()` using formula 'y ~ x'
+"
+"2","`geom_smooth()` using formula 'y ~ x'
+"

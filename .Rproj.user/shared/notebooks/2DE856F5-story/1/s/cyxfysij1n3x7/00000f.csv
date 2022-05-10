@@ -1,0 +1,7 @@
+"0","library(ggplot2)"
+"0",""
+"0","ggplot(MLB2021hittingstats, aes(x = OPS, y = AVG, color = AgeGroup)) +"
+"0","  geom_point(alpha = 0.6) +"
+"0","  geom_text(aes(label = Last), hjust = .5, vjust = -.7, size = 2) +"
+"0","  ggtitle(""2021: OPS vs Batting Average with Age Group as color"") +"
+"0","  labs(color = ""Age Group"")"

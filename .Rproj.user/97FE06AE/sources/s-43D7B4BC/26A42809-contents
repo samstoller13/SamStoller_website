@@ -1,0 +1,28 @@
+---
+title: "Data Visualization: \n Sam's Website"
+image: "datameme.jpg"
+links:
+  - label: Twitter
+    url: "https://twitter.com/SamStoller13"
+  - label: Instagram
+    url: "https://www.instagram.com/sam.stoller/"
+  - label: Email
+    url: "mailto:sjs044@bucknell.edu"
+output:
+  postcards::trestles
+site: distill::distill_website
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+# Learn more about creating websites with Distill at:
+# https://rstudio.github.io/distill/website.html
+
+```
+
+## Website Description
+
+Welcome to my website! On this Home page, I linked my Twitter, Instagram, and email. Feel free to follow me and send an email if you have any questions about the site. Under the "Past Visualizations" tab, you will find a gallery of previous data visualizations and artworks I have created through R.
+
+

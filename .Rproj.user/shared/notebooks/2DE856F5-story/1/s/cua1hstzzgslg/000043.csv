@@ -1,0 +1,9 @@
+"0","library(ggridges)"
+"0","ggplot(MLB2016hittingstats, aes(x = OPS, y = AgeGroup)) +"
+"0","  stat_density_ridges(geom = ""density_ridges_gradient"", aes(fill = factor(stat(quantile))), calc_ecdf = TRUE, quantiles = 4, quantile_lines = TRUE, scale = 0.8) +"
+"0","  geom_boxplot(data = MLB2021hittingstats, aes(x = OPS, y = AgeGroup), width = 0.3, outlier.color = ""green"") +"
+"0","  scale_fill_discrete(name = ""Quantile"") +"
+"0","  ggtitle(""OPS by Age Group: 2021 Box Plot and 2016 Density Ridge Plot"") +"
+"0","  ylab(""Age Group"")"
+"2","Picking joint bandwidth of 0.0279
+"

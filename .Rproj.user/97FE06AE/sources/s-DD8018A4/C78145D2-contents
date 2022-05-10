@@ -1,0 +1,101 @@
+---
+title: "Visualizations from MATH 230"
+description: |
+  Below is a catalog of visualizations that I have created during this course. This includes generative artwork, a ggridges plot, and more. Enjoy!
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Section 1: Generative Artwork
+
+*Artwork 1: A Beautiful Twist*
+![Artwork 1: A Beautiful Twist](/Users/samstoller/Documents/Data/Final/SamStoller_website/artwork/artwork1.png){width=50%}
+
+![Artwork 2: Set Ablaze](/Users/samstoller/Documents/Data/Final/SamStoller_website/artwork/artwork2.png){width=50%}
+*Artwork 2: Set Ablaze*
+
+*Artwork 3: Michigan Wolverines*
+![Artwork 3: Michigan Wolverines](/Users/samstoller/Documents/Data/Final/SamStoller_website/artwork/artwork3.png){width=50%}
+
+***
+
+## Section 2: GGRidges Extension
+
+```{r, echo=FALSE}
+library(Lock5Data)
+library(ggridges)
+library(ggplot2)
+data("GPAbySex")
+
+GPA.cat = cut(GPAbySex$GPA, breaks = c(1.9,2.7,3.3,4.1), labels = c("low", "middle", "high"))
+GPAbySex$GPA.cat=GPA.cat
+
+ggplot(GPAbySex, aes(x = Exercise, y= GPA.cat, fill = factor(stat(quantile)))) +
+  stat_density_ridges(geom = "density_ridges_gradient", calc_ecdf = TRUE, quantiles = 4, quantile_lines = TRUE, rel_min_height = 0.01) +
+  scale_fill_viridis_d(name = "Quantiles",labels = c("First Quantile", "Second Quantile", "Third Quantile","Fourth Quantile"))+
+  ylab("GPA Categories") +
+  ggtitle("Hours of Exercise by GPA")
+```
+This is a density ridge plot from the ggridges extension that shows the people's exercise hours per week, split by their GPA category of low, middle, and high. This data comes from GPAbySex, a subset of the StudentSurvey data set that surveyed introductory statistics students. The colors on the graph correspond with the quantile that the data falls into for that GPA category. The peak in the ridges show that the most common hours of exercise per week for each GPA category is around 5, and that a larger portion of students with lower GPAs tend to work out more.
+
+***
+
+## Section 3: Shiny App
+
+[Shiny App Link](https://rconnect.bucknell.edu/content/68ed495d-b45e-4329-8aec-f45d272722bb/ "Link")
+
+![](/Users/samstoller/Documents/Data/Final/SamStoller_website/ShinyAppSS.png)
+Lawrence and I's Shiny App allows users to adjust the confidence level of a sample and its sample size to produce 100 different confidence intervals. The data set that we used is NFL player salaries from the 2019 season. The population mean salary for NFL players in 2019 is around 3 million dollars, which is what that black line represents. The 100 intervals are plotted on this graph with the black dots in the middle representing their sample mean. If the color of the sample is green, then it contains the true mean. If it is red, it does not contain the true mean. The accuracy number output represents the percentage of intervals that contained the true mean, and this number is approximately equal to the confidence level. 
+
+***
+
+## Section 4: Other Visualizations
+
+*Geom_Area*
+
+```{r}
+library(ggplot2)
+usdeath = read.csv("CausesofDeath.csv", header = TRUE, sep = ",")
+
+ggplot(usdeath, aes(x = Year, y = Count, fill = CauseDeath)) +
+  geom_area() +
+  scale_fill_brewer(palette = "Spectral") +
+  ggtitle("Leading Causes of Death in U.S. by Year") +
+  ylab("Thousands of Deaths") +
+  labs(fill="Cause of Death")
+```
+This graph comes from our second exam in the last section where we had to try and recreate it. It uses geom_area and shows, by width, the number of deaths by the top 11 causes between 2015 and 2020. It uses the Spectral color palette and I think it makes the graph look very nice. Heart disease is the leading cause, with cancer right behind it. It also shows how massive of an effect COVID had as it appears out of nowhere between 2019 and 2020 and seems to have represented well over 300,000 deaths.
+
+*GGAlluvial*
+
+```{r}
+library(vcd)
+library(ggalluvial)
+data(Arthritis)
+Arthritis = Arthritis[complete.cases(Arthritis), ]
+
+# We specify axis1 and axis2 as 2 axes for left and right side. 
+# Take note that for this example the y axis is not specified.
+ggplot(data = Arthritis, aes(axis1 = Treatment, axis2 = Improved)) +
+  
+  # Call geom_alluvium and specify what variable is used for categorizing color.
+  geom_alluvium(aes(fill = Improved), width = 1/12) +
+  
+  # Create a shape and label axis1 and axis2 for aesthetics.
+  # Note that \n is the new line symbol
+  geom_stratum(alpha = 0, width = 1/12) +
+  geom_label(stat = "stratum", aes(label = after_stat(stratum))) +
+  scale_x_discrete(limits = c("Treatment \n factor", "Improvement \n outcome"), 
+                   expand = c(.05, .05)) +
+  
+  # Label the y-axis. 
+  ylab("Cumulative Observations") +
+  
+  labs(fill = "Improvement outcomes") +
+  
+  # Make a title
+  ggtitle("Improvement outcomes distribution by treatment factors")
+```
+This is an alluvial plot created using the ggalluvial extension. The data set it is using is from a double blind trial for a new treatment for arthritis where patients were either treated with a placebo or a real treatment. This alluvial plot shows the portion of patients that reported feeling no improvement, some improvement, or marked (significant) improvement. It is a very visual plot that is easy to read, especially with the colors also matching up with the second axis. The width of each band represents how many patients fell into that group, i.e. placebo patients who felt some improvement being the upper blue band.

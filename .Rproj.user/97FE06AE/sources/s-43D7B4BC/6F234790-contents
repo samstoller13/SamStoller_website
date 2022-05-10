@@ -1,0 +1,53 @@
+---
+title: "Visualizations from MATH 230"
+description: |
+  Below is a catalog of visualizations that I have created during this course. This includes generative artwork, a ggridges plot, and more. Enjoy!
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Section 1: Generative Artwork
+
+*Artwork 1: A Beautiful Twist*
+![Artwork 1: A Beautiful Twist](/Users/samstoller/Documents/Data/Final/SamStoller_website/artwork/artwork1.png){width=50%}
+
+![Artwork 2: Set Ablaze](/Users/samstoller/Documents/Data/Final/SamStoller_website/artwork/artwork2.png){width=50%}
+*Artwork 2: Set Ablaze*
+
+*Artwork 3: Michigan Wolverines*
+![Artwork 3: Michigan Wolverines](/Users/samstoller/Documents/Data/Final/SamStoller_website/artwork/artwork3.png){width=50%}
+
+***
+
+## Section 2: GGPlot Visualizations
+
+*GGRidges Extension:*
+
+```{r, echo=FALSE}
+library(Lock5Data)
+library(ggridges)
+library(ggplot2)
+data("GPAbySex")
+
+GPA.cat = cut(GPAbySex$GPA, breaks = c(1.9,2.7,3.3,4.1), labels = c("low", "middle", "high"))
+GPAbySex$GPA.cat=GPA.cat
+
+ggplot(GPAbySex, aes(x = Exercise, y= GPA.cat, fill = factor(stat(quantile)))) +
+  stat_density_ridges(geom = "density_ridges_gradient", calc_ecdf = TRUE, quantiles = 4, quantile_lines = TRUE, rel_min_height = 0.01) +
+  scale_fill_viridis_d(name = "Quantiles",labels = c("First Quantile", "Second Quantile", "Third Quantile","Fourth Quantile"))+
+  ylab("GPA Categories") +
+  ggtitle("Hours of Exercise by GPA")
+```
+This is a density ridge plot that shows the people's exercise hours per week, split by their GPA category of low, middle, and high. This data comes from GPAbySex, a subset of the StudentSurvey data set that surveyed introductory statistics students. The colors on the graph correspond with the quantile that the data falls into for that GPA category. The peak in the ridges show that the most common hours of exercise per week for each GPA category is aroun 5, and that a larger portion of students with lower GPAs tend to work out more.
+
+*Shiny App:*
+
+[Shiny App Link](https://rconnect.bucknell.edu/content/68ed495d-b45e-4329-8aec-f45d272722bb/ "Link")
+
+![](/Users/samstoller/Documents/Data/Final/SamStoller_website/ShinyAppSS.png)
+
+
+
+

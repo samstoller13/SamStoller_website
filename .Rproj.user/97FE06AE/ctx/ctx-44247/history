@@ -1,0 +1,512 @@
+library(ggplot2)
+ggplot(MLB2021hittingstats, aes(x = OPS, y = AVG)) +
+geom_point(alpha = 0.6, fill = AgeGroup) +
+geom_text(aes(label = Last), hjust = -.1, vjust = -.3, size = 2) +
+ggtitle("OPS vs Batting Average")
+library(ggplot2)
+ggplot(MLB2021hittingstats, aes(x = OPS, y = AVG, fill = AgeGroup)) +
+geom_point(alpha = 0.6) +
+geom_text(aes(label = Last), hjust = -.1, vjust = -.3, size = 2) +
+ggtitle("OPS vs Batting Average")
+library(ggplot2)
+ggplot(MLB2021hittingstats, aes(x = OPS, y = AVG, color = AgeGroup)) +
+geom_point(alpha = 0.6) +
+geom_text(aes(label = Last), hjust = -.1, vjust = -.3, size = 2) +
+ggtitle("OPS vs Batting Average")
+ggplot(MLB2021hittingstats, aes(x = HR, y = ..count..)) +
+geom_dotplot(dotsize = .5, method = "histodot", fill = "orange")
+ggplot(MLB2021hittingstats, aes(x = HR, fill = AgeGroup)) +
+geom_dotplot(dotsize = .5, method = "histodot")
+ggplot(MLB2021hittingstats, aes(x = HR, fill = AgeGroup)) +
+geom_dotplot(dotsize = .5, method = "histodot", binwidth = 1)
+ggplot(MLB2021hittingstats, aes(x = HR, fill = AgeGroup)) +
+geom_dotplot(dotsize = .5, method = "histodot", binwidth = NULL)
+ggplot(MLB2021hittingstats, aes(x = HR, fill = AgeGroup)) +
+geom_dotplot(dotsize = .5, method = "dotdensity", binwidth = NULL)
+library(ggplot2)
+ggplot(MLB2021hittingstats, aes(x = OPS, y = AVG, color = AgeGroup)) +
+geom_point(alpha = 0.6) +
+geom_text(aes(label = Last), hjust = 0, vjust = .3, size = 2) +
+ggtitle("OPS vs Batting Average")
+library(ggplot2)
+ggplot(MLB2021hittingstats, aes(x = OPS, y = AVG, color = AgeGroup)) +
+geom_point(alpha = 0.6) +
+geom_text(aes(label = Last), hjust = .5, vjust = .3, size = 2) +
+ggtitle("OPS vs Batting Average")
+library(ggplot2)
+ggplot(MLB2021hittingstats, aes(x = OPS, y = AVG, color = AgeGroup)) +
+geom_point(alpha = 0.6) +
+geom_text(aes(label = Last), hjust = .5, vjust = .5, size = 2) +
+ggtitle("OPS vs Batting Average")
+library(ggplot2)
+ggplot(MLB2021hittingstats, aes(x = OPS, y = AVG, color = AgeGroup)) +
+geom_point(alpha = 0.6) +
+geom_text(aes(label = Last), hjust = .5, vjust = -.1, size = 2) +
+ggtitle("OPS vs Batting Average")
+library(ggplot2)
+ggplot(MLB2021hittingstats, aes(x = OPS, y = AVG, color = AgeGroup)) +
+geom_point(alpha = 0.6) +
+geom_text(aes(label = Last), hjust = .5, vjust = -.3, size = 2) +
+ggtitle("OPS vs Batting Average")
+library(ggplot2)
+ggplot(MLB2021hittingstats, aes(x = OPS, y = AVG, color = AgeGroup)) +
+geom_point(alpha = 0.6) +
+geom_text(aes(label = Last), hjust = .5, vjust = -.5, size = 2) +
+ggtitle("OPS vs Batting Average")
+library(ggplot2)
+ggplot(MLB2021hittingstats, aes(x = OPS, y = AVG, color = AgeGroup)) +
+geom_point(alpha = 0.6) +
+geom_text(aes(label = Last), hjust = .5, vjust = -.7, size = 2) +
+ggtitle("OPS vs Batting Average")
+library(ggplot2)
+ggplot(MLB2021hittingstats, aes(x = OPS, y = AVG, color = AgeGroup)) +
+geom_point(alpha = 0.6) +
+geom_text(aes(label = Last), hjust = .5, vjust = -.7, size = 2) +
+ggtitle("OPS vs Batting Average with color Age Group") +
+labs(color = "Age Group")
+library(ggplot2)
+ggplot(MLB2021hittingstats, aes(x = OPS, y = AVG, color = AgeGroup)) +
+geom_point(alpha = 0.6) +
+geom_text(aes(label = Last), hjust = .5, vjust = -.7, size = 2) +
+ggtitle("OPS vs Batting Average with Age Group as color") +
+labs(color = "Age Group")
+ggplot(MLB2021hittingstats, aes(x = HR, fill = AgeGroup)) +
+geom_dotplot(dotsize = .7, method = "dotdensity", binwidth = NULL)
+ggplot(MLB2021hittingstats, aes(x = HR, fill = AgeGroup)) +
+geom_dotplot(dotsize = .7, binwidth = 1, method = "dotdensity", binwidth = NULL)
+ggplot(MLB2021hittingstats, aes(x = HR, fill = AgeGroup)) +
+geom_dotplot(dotsize = .7, method = "dotdensity", binwidth = 1)
+ggplot(MLB2021hittingstats, aes(x = HR, fill = AgeGroup)) +
+geom_dotplot(dotsize = .7, method = "dotdensity", binwidth = NULL)
+MLB2021hittingstats = read.csv("/Users/samstoller/Documents/Data/Final/SamStoller_website/2021hittingstats.csv")
+MLB2016hittingstats = read.csv("/Users/samstoller/Documents/Data/Final/SamStoller_website/2016hittingstats.csv")
+MLB2021pitchingstats = read.csv("/Users/samstoller/Documents/Data/Final/SamStoller_website/pitchingstats.csv")
+View(MLB2016hittingstats)
+knitr::opts_chunk$set(echo = FALSE)
+MLB2021hittingstats = read.csv("/Users/samstoller/Documents/Data/Final/SamStoller_website/2021hittingstats.csv")
+MLB2016hittingstats = read.csv("/Users/samstoller/Documents/Data/Final/SamStoller_website/2016hittingstats.csv")
+MLB2021pitchingstats = read.csv("/Users/samstoller/Documents/Data/Final/SamStoller_website/pitchingstats.csv")
+#Cleaned the hitting data by changing column names and removing unnecessary columns
+#2021:
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "first_name"] = "First"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "last_name"] = "Last"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "player_age"] = "Age"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "b_ab"] = "AB"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "b_total_pa"] = "PA"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "b_home_run"] = "HR"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "b_strikeout"] = "SO"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "b_walk"] = "BB"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "b_k_percent"] = "K.Percent"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "b_bb_percent"] = "BB.Percent"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "batting_avg"] = "AVG"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "slg_percent"] = "SLG"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "on_base_percent"] = "OBP"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "on_base_plus_slg"] = "OPS"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "xba"] = "xBA"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "xslg"] = "xSLG"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "woba"] = "wOBA"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "xobp"] = "xOBP"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "exit_velocity_avg"] = "AvgEV"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "launch_angle_avg"] = "AvgLA"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "hard_hit_percent"] = "HardHit.Percent"
+MLB2021hittingstats = subset(MLB2021hittingstats, select = -c(player_id, year, X))
+#2016:
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "first_name"] = "First"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "last_name"] = "Last"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "player_age"] = "Age"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "b_ab"] = "AB"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "b_total_pa"] = "PA"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "b_home_run"] = "HR"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "b_strikeout"] = "SO"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "b_walk"] = "BB"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "b_k_percent"] = "K.Percent"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "b_bb_percent"] = "BB.Percent"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "batting_avg"] = "AVG"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "slg_percent"] = "SLG"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "on_base_percent"] = "OBP"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "on_base_plus_slg"] = "OPS"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "xba"] = "xBA"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "xslg"] = "xSLG"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "woba"] = "wOBA"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "xobp"] = "xOBP"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "exit_velocity_avg"] = "AvgEV"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "launch_angle_avg"] = "AvgLA"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "hard_hit_percent"] = "HardHit.Percent"
+MLB2016hittingstats = subset(MLB2016hittingstats, select = -c(player_id, year, X))
+#Add a categorical variable to sort players into age groups
+MLB2021hittingstats$AgeGroup = cut(MLB2021hittingstats$Age, breaks = c(0, 26, 31, 42), labels = c("young", "middle", "old"))
+MLB2016hittingstats$AgeGroup = cut(MLB2016hittingstats$Age, breaks = c(0, 26, 31, 42), labels = c("young", "middle", "old"))
+#Cleaned the pitching data by changing column names and removing unnecessary columns
+names(MLB2021pitchingstats)[names(MLB2021pitchingstats) == "first_name"] = "First"
+names(MLB2021pitchingstats)[names(MLB2021pitchingstats) == "last_name"] = "Last"
+names(MLB2021pitchingstats)[names(MLB2021pitchingstats) == "player_age"] = "Age"
+names(MLB2021pitchingstats)[names(MLB2021pitchingstats) == "p_game"] = "G"
+names(MLB2021pitchingstats)[names(MLB2021pitchingstats) == "p_formatted_ip"] = "IP"
+names(MLB2021pitchingstats)[names(MLB2021pitchingstats) == "p_k_percent"] = "K.Percent"
+names(MLB2021pitchingstats)[names(MLB2021pitchingstats) == "p_bb_percent"] = "BB.Percent"
+names(MLB2021pitchingstats)[names(MLB2021pitchingstats) == "batting_avg"] = "AVG"
+names(MLB2021pitchingstats)[names(MLB2021pitchingstats) == "on_base_plus_slg"] = "OPS"
+names(MLB2021pitchingstats)[names(MLB2021pitchingstats) == "p_win"] = "W"
+names(MLB2021pitchingstats)[names(MLB2021pitchingstats) == "p_loss"] = "L"
+names(MLB2021pitchingstats)[names(MLB2021pitchingstats) == "p_era"] = "ERA"
+MLB2021pitchingstats = subset(MLB2021pitchingstats, select = -c(player_id, year, X))
+#Add a categorical variable to sort players into age groups
+MLB2021pitchingstats$AgeGroup = cut(MLB2021pitchingstats$Age, breaks = c(0, 26, 31, 42), labels = c("young", "middle", "old"))
+library(ggplot2)
+ggplot(MLB2021hittingstats, aes(x = OPS, y = AVG, color = AgeGroup)) +
+geom_point(alpha = 0.6) +
+geom_text(aes(label = Last), hjust = .5, vjust = -.7, size = 2) +
+ggtitle("OPS vs Batting Average with Age Group as color") +
+labs(color = "Age Group")
+ggplot(MLB2021hittingstats, aes(x = AgeGroup, y = OPS, fill = AgeGroup)) +
+geom_boxplot() +
+coord_flip() +
+guides(fill = "none") +
+ggtitle("Boxplots of OPS by Age Group") +
+xlab("Age Group")
+ggplot(MLB2021hittingstats, aes(x = HR, fill = AgeGroup)) +
+geom_dotplot(dotsize = .7, method = "dotdensity", binwidth = NULL)
+library(ggplot2)
+ggplot(MLB2021hittingstats, aes(x = OPS, y = AVG, color = AgeGroup)) +
+geom_point(alpha = 0.6) +
+geom_point(data = MLB2016hittingstats)
+geom_text(aes(label = Last), hjust = .5, vjust = -.7, size = 2) +
+ggtitle("OPS vs Batting Average with Age Group as color") +
+labs(color = "Age Group")
+library(ggplot2)
+ggplot(MLB2021hittingstats, aes(x = OPS, y = AVG, color = AgeGroup)) +
+geom_point(alpha = 0.6) +
+geom_text(aes(label = Last), hjust = .5, vjust = -.7, size = 2) +
+ggtitle("OPS vs Batting Average with Age Group as color") +
+labs(color = "Age Group")
+ggplot(MLB2016hittingstats, aes(x = OPS, y = AVG, color = AgeGroup)) +
+geom_point(alpha = 0.6) +
+geom_text(aes(label = Last), hjust = .5, vjust = -.7, size = 2) +
+ggtitle("OPS vs Batting Average with Age Group as color") +
+labs(color = "Age Group")
+knitr::opts_chunk$set(echo = FALSE)
+MLB2021hittingstats = read.csv("/Users/samstoller/Documents/Data/Final/SamStoller_website/2021hittingstats.csv")
+MLB2016hittingstats = read.csv("/Users/samstoller/Documents/Data/Final/SamStoller_website/2016hittingstats.csv")
+MLB2021pitchingstats = read.csv("/Users/samstoller/Documents/Data/Final/SamStoller_website/pitchingstats.csv")
+#Cleaned the hitting data by changing column names and removing unnecessary columns
+#2021:
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "first_name"] = "First"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "last_name"] = "Last"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "player_age"] = "Age"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "b_ab"] = "AB"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "b_total_pa"] = "PA"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "b_home_run"] = "HR"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "b_strikeout"] = "SO"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "b_walk"] = "BB"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "b_k_percent"] = "K.Percent"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "b_bb_percent"] = "BB.Percent"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "batting_avg"] = "AVG"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "slg_percent"] = "SLG"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "on_base_percent"] = "OBP"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "on_base_plus_slg"] = "OPS"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "xba"] = "xBA"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "xslg"] = "xSLG"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "woba"] = "wOBA"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "xobp"] = "xOBP"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "exit_velocity_avg"] = "AvgEV"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "launch_angle_avg"] = "AvgLA"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "hard_hit_percent"] = "HardHit.Percent"
+MLB2021hittingstats = subset(MLB2021hittingstats, select = -c(player_id, year, X))
+#2016:
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "first_name"] = "First"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "last_name"] = "Last"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "player_age"] = "Age"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "b_ab"] = "AB"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "b_total_pa"] = "PA"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "b_home_run"] = "HR"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "b_strikeout"] = "SO"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "b_walk"] = "BB"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "b_k_percent"] = "K.Percent"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "b_bb_percent"] = "BB.Percent"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "batting_avg"] = "AVG"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "slg_percent"] = "SLG"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "on_base_percent"] = "OBP"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "on_base_plus_slg"] = "OPS"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "xba"] = "xBA"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "xslg"] = "xSLG"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "woba"] = "wOBA"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "xobp"] = "xOBP"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "exit_velocity_avg"] = "AvgEV"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "launch_angle_avg"] = "AvgLA"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "hard_hit_percent"] = "HardHit.Percent"
+MLB2016hittingstats = subset(MLB2016hittingstats, select = -c(player_id, year, X))
+#Add a categorical variable to sort players into age groups
+MLB2021hittingstats$AgeGroup = cut(MLB2021hittingstats$Age, breaks = c(0, 26, 31, 42), labels = c("young", "middle", "old"))
+MLB2016hittingstats$AgeGroup = cut(MLB2016hittingstats$Age, breaks = c(0, 26, 31, 42), labels = c("young", "middle", "old"))
+#Cleaned the pitching data by changing column names and removing unnecessary columns
+names(MLB2021pitchingstats)[names(MLB2021pitchingstats) == "first_name"] = "First"
+names(MLB2021pitchingstats)[names(MLB2021pitchingstats) == "last_name"] = "Last"
+names(MLB2021pitchingstats)[names(MLB2021pitchingstats) == "player_age"] = "Age"
+names(MLB2021pitchingstats)[names(MLB2021pitchingstats) == "p_game"] = "G"
+names(MLB2021pitchingstats)[names(MLB2021pitchingstats) == "p_formatted_ip"] = "IP"
+names(MLB2021pitchingstats)[names(MLB2021pitchingstats) == "p_k_percent"] = "K.Percent"
+names(MLB2021pitchingstats)[names(MLB2021pitchingstats) == "p_bb_percent"] = "BB.Percent"
+names(MLB2021pitchingstats)[names(MLB2021pitchingstats) == "batting_avg"] = "AVG"
+names(MLB2021pitchingstats)[names(MLB2021pitchingstats) == "on_base_plus_slg"] = "OPS"
+names(MLB2021pitchingstats)[names(MLB2021pitchingstats) == "p_win"] = "W"
+names(MLB2021pitchingstats)[names(MLB2021pitchingstats) == "p_loss"] = "L"
+names(MLB2021pitchingstats)[names(MLB2021pitchingstats) == "p_era"] = "ERA"
+MLB2021pitchingstats = subset(MLB2021pitchingstats, select = -c(player_id, year, X))
+#Add a categorical variable to sort players into age groups
+MLB2021pitchingstats$AgeGroup = cut(MLB2021pitchingstats$Age, breaks = c(0, 26, 31, 42), labels = c("young", "middle", "old"))
+library(ggplot2)
+ggplot(MLB2021hittingstats, aes(x = OPS, y = AVG, color = AgeGroup)) +
+geom_point(alpha = 0.6) +
+geom_text(aes(label = Last), hjust = .5, vjust = -.7, size = 2) +
+ggtitle("2021: OPS vs Batting Average with Age Group as color") +
+labs(color = "Age Group")
+ggplot(MLB2016hittingstats, aes(x = OPS, y = AVG, color = AgeGroup)) +
+geom_point(alpha = 0.6) +
+geom_text(aes(label = Last), hjust = .5, vjust = -.7, size = 2) +
+ggtitle("2016: OPS vs Batting Average with Age Group as color") +
+labs(color = "Age Group")
+ggplot(MLB2021hittingstats, aes(x = AgeGroup, y = OPS, fill = AgeGroup)) +
+geom_boxplot() +
+coord_flip() +
+guides(fill = "none") +
+ggtitle("Boxplots of OPS by Age Group") +
+xlab("Age Group")
+ggplot(MLB2021hittingstats, aes(x = HR, fill = AgeGroup)) +
+geom_dotplot(dotsize = .7, method = "dotdensity", binwidth = NULL)
+knitr::opts_chunk$set(echo = FALSE)
+MLB2021hittingstats = read.csv("/Users/samstoller/Documents/Data/Final/SamStoller_website/2021hittingstats.csv")
+MLB2016hittingstats = read.csv("/Users/samstoller/Documents/Data/Final/SamStoller_website/2016hittingstats.csv")
+MLB2021pitchingstats = read.csv("/Users/samstoller/Documents/Data/Final/SamStoller_website/2021pitchingstats.csv")
+MLB2016pitchingstats = read.csv("/Users/samstoller/Documents/Data/Final/SamStoller_website/2016pitchingstats.csv")
+#Cleaned the hitting data by changing column names and removing unnecessary columns
+#2021:
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "first_name"] = "First"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "last_name"] = "Last"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "player_age"] = "Age"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "b_ab"] = "AB"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "b_total_pa"] = "PA"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "b_home_run"] = "HR"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "b_strikeout"] = "SO"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "b_walk"] = "BB"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "b_k_percent"] = "K.Percent"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "b_bb_percent"] = "BB.Percent"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "batting_avg"] = "AVG"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "slg_percent"] = "SLG"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "on_base_percent"] = "OBP"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "on_base_plus_slg"] = "OPS"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "xba"] = "xBA"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "xslg"] = "xSLG"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "woba"] = "wOBA"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "xobp"] = "xOBP"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "exit_velocity_avg"] = "AvgEV"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "launch_angle_avg"] = "AvgLA"
+names(MLB2021hittingstats)[names(MLB2021hittingstats) == "hard_hit_percent"] = "HardHit.Percent"
+MLB2021hittingstats = subset(MLB2021hittingstats, select = -c(player_id, year, X))
+#2016:
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "first_name"] = "First"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "last_name"] = "Last"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "player_age"] = "Age"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "b_ab"] = "AB"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "b_total_pa"] = "PA"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "b_home_run"] = "HR"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "b_strikeout"] = "SO"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "b_walk"] = "BB"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "b_k_percent"] = "K.Percent"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "b_bb_percent"] = "BB.Percent"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "batting_avg"] = "AVG"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "slg_percent"] = "SLG"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "on_base_percent"] = "OBP"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "on_base_plus_slg"] = "OPS"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "xba"] = "xBA"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "xslg"] = "xSLG"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "woba"] = "wOBA"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "xobp"] = "xOBP"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "exit_velocity_avg"] = "AvgEV"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "launch_angle_avg"] = "AvgLA"
+names(MLB2016hittingstats)[names(MLB2016hittingstats) == "hard_hit_percent"] = "HardHit.Percent"
+MLB2016hittingstats = subset(MLB2016hittingstats, select = -c(player_id, year, X))
+#Add a categorical variable to sort players into age groups
+MLB2021hittingstats$AgeGroup = cut(MLB2021hittingstats$Age, breaks = c(0, 26, 31, 42), labels = c("young", "middle", "old"))
+MLB2016hittingstats$AgeGroup = cut(MLB2016hittingstats$Age, breaks = c(0, 26, 31, 42), labels = c("young", "middle", "old"))
+#Cleaned the pitching data by changing column names and removing unnecessary columns
+#2021:
+names(MLB2021pitchingstats)[names(MLB2021pitchingstats) == "first_name"] = "First"
+names(MLB2021pitchingstats)[names(MLB2021pitchingstats) == "last_name"] = "Last"
+names(MLB2021pitchingstats)[names(MLB2021pitchingstats) == "player_age"] = "Age"
+names(MLB2021pitchingstats)[names(MLB2021pitchingstats) == "p_game"] = "G"
+names(MLB2021pitchingstats)[names(MLB2021pitchingstats) == "p_formatted_ip"] = "IP"
+names(MLB2021pitchingstats)[names(MLB2021pitchingstats) == "p_k_percent"] = "K.Percent"
+names(MLB2021pitchingstats)[names(MLB2021pitchingstats) == "p_bb_percent"] = "BB.Percent"
+names(MLB2021pitchingstats)[names(MLB2021pitchingstats) == "batting_avg"] = "AVG"
+names(MLB2021pitchingstats)[names(MLB2021pitchingstats) == "on_base_plus_slg"] = "OPS"
+names(MLB2021pitchingstats)[names(MLB2021pitchingstats) == "p_win"] = "W"
+names(MLB2021pitchingstats)[names(MLB2021pitchingstats) == "p_loss"] = "L"
+names(MLB2021pitchingstats)[names(MLB2021pitchingstats) == "p_era"] = "ERA"
+MLB2021pitchingstats = subset(MLB2021pitchingstats, select = -c(player_id, year, X))
+#2016:
+names(MLB2016pitchingstats)[names(MLB2016pitchingstats) == "first_name"] = "First"
+names(MLB2016pitchingstats)[names(MLB2016pitchingstats) == "last_name"] = "Last"
+names(MLB2016pitchingstats)[names(MLB2016pitchingstats) == "player_age"] = "Age"
+names(MLB2016pitchingstats)[names(MLB2016pitchingstats) == "p_game"] = "G"
+names(MLB2016pitchingstats)[names(MLB2016pitchingstats) == "p_formatted_ip"] = "IP"
+names(MLB2016pitchingstats)[names(MLB2016pitchingstats) == "p_k_percent"] = "K.Percent"
+names(MLB2016pitchingstats)[names(MLB2016pitchingstats) == "p_bb_percent"] = "BB.Percent"
+names(MLB2016pitchingstats)[names(MLB2016pitchingstats) == "batting_avg"] = "AVG"
+names(MLB2016pitchingstats)[names(MLB2016pitchingstats) == "on_base_plus_slg"] = "OPS"
+names(MLB2016pitchingstats)[names(MLB2016pitchingstats) == "p_win"] = "W"
+names(MLB2016pitchingstats)[names(MLB2016pitchingstats) == "p_loss"] = "L"
+names(MLB2016pitchingstats)[names(MLB2016pitchingstats) == "p_era"] = "ERA"
+MLB2016pitchingstats = subset(MLB2016pitchingstats, select = -c(player_id, year, X))
+#Add a categorical variable to sort players into age groups
+MLB2021pitchingstats$AgeGroup = cut(MLB2021pitchingstats$Age, breaks = c(0, 26, 31, 42), labels = c("young", "middle", "old"))
+MLB2016pitchingstats$AgeGroup = cut(MLB2016pitchingstats$Age, breaks = c(0, 26, 31, 42), labels = c("young", "middle", "old"))
+library(ggplot2)
+ggplot(MLB2021hittingstats, aes(x = OPS, y = AVG, color = AgeGroup)) +
+geom_point(alpha = 0.6) +
+geom_text(aes(label = Last), hjust = .5, vjust = -.7, size = 2) +
+ggtitle("2021: OPS vs Batting Average with Age Group as color") +
+labs(color = "Age Group")
+ggplot(MLB2016hittingstats, aes(x = OPS, y = AVG, color = AgeGroup)) +
+geom_point(alpha = 0.6) +
+geom_text(aes(label = Last), hjust = .5, vjust = -.7, size = 2) +
+ggtitle("2016: OPS vs Batting Average with Age Group as color") +
+labs(color = "Age Group")
+ggplot(MLB2021hittingstats, aes(x = AgeGroup, y = OPS, fill = AgeGroup)) +
+geom_boxplot() +
+coord_flip() +
+guides(fill = "none") +
+ggtitle("Boxplots of OPS by Age Group") +
+xlab("Age Group")
+ggplot(MLB2021hittingstats, aes(x = HR, fill = AgeGroup)) +
+geom_dotplot(dotsize = .7, method = "dotdensity", binwidth = NULL)
+View(MLB2016pitchingstats)
+library(ggplot2)
+ggplot(NULL, aes(x = OPS, y = AVG, color = AgeGroup)) +
+geom_point(data = MLB2016hittingstats, alpha = 0.6) +
+geom_point(data = MLB2021hittingstats, alpha = 0.6) +
+geom_text(aes(label = Last), hjust = .5, vjust = -.7, size = 2) +
+ggtitle("2021: OPS vs Batting Average with Age Group as color") +
+labs(color = "Age Group")
+library(ggplot2)
+ggplot(NULL, aes(x = OPS, y = AVG, color = AgeGroup)) +
+geom_point(data = MLB2016hittingstats, alpha = 0.6) +
+geom_point(data = MLB2021hittingstats, alpha = 0.6) +
+geom_text(data = MLB2021hittingstats, aes(label = Last), hjust = .5, vjust = -.7, size = 2) +
+ggtitle("2021: OPS vs Batting Average with Age Group as color") +
+labs(color = "Age Group")
+library(ggplot2)
+ggplot(NULL, aes(x = OPS, y = AVG, color = AgeGroup)) +
+geom_point(data = MLB2016hittingstats, alpha = 0.6) +
+geom_point(data = MLB2021hittingstats, alpha = 0.6) +
+geom_text(data = MLB2021hittingstats, aes(label = Last), hjust = .5, vjust = -.7, size = 2) +
+geom_text(data = MLB2016hittingstats, aes(label = Last), hjust = .5, vjust = -.7, size = 2) +
+ggtitle("2021: OPS vs Batting Average with Age Group as color") +
+labs(color = "Age Group")
+library(ggplot2)
+ggplot(NULL, aes(x = OPS, y = AVG, color = AgeGroup)) +
+geom_point(data = MLB2016hittingstats, alpha = 0.6, aes(color = c("black", "violet", "orange"))) +
+geom_point(data = MLB2021hittingstats, alpha = 0.6) +
+geom_text(data = MLB2021hittingstats, aes(label = Last), hjust = .5, vjust = -.7, size = 2) +
+geom_text(data = MLB2016hittingstats, aes(label = Last), hjust = .5, vjust = -.7, size = 2) +
+ggtitle("2021: OPS vs Batting Average with Age Group as color") +
+labs(color = "Age Group")
+library(ggplot2)
+ggplot(NULL, aes(x = OPS, y = AVG, color = AgeGroup)) +
+geom_point(data = MLB2016hittingstats, alpha = 0.6) +
+geom_point(data = MLB2021hittingstats, alpha = 0.6) +
+geom_text(data = MLB2021hittingstats, aes(label = Last), hjust = .5, vjust = -.7, size = 2) +
+geom_text(data = MLB2016hittingstats, aes(label = Last), hjust = .5, vjust = -.7, size = 2) +
+ggtitle("2021: OPS vs Batting Average with Age Group as color") +
+labs(color = "Age Group")
+library(ggplot2)
+ggplot(NULL, aes(x = OPS, y = AVG, color = AgeGroup)) +
+geom_point(data = MLB2016hittingstats, alpha = 0.6) +
+geom_point(data = MLB2021hittingstats, alpha = 0.6) +
+geom_text(data = MLB2021hittingstats, aes(label = Last), hjust = .5, vjust = -.7, size = 2) +
+geom_text(data = MLB2016hittingstats, aes(label = Last), hjust = .5, vjust = -.7, size = 2) +
+ggtitle("2021: OPS vs Batting Average with Age Group as color") +
+labs(color = "Age Group")
+ggplot(MLB2016hittingstats, aes(x = OPS, y = AVG, color = AgeGroup)) +
+geom_point(alpha = 0.6) +
+geom_text(aes(label = Last), hjust = .5, vjust = -.7, size = 2) +
+ggtitle("2016: OPS vs Batting Average with Age Group as color") +
+labs(color = "Age Group")
+library(ggplot2)
+ggplot(MLB2021hittingstats, aes(x = OPS, y = AVG, color = AgeGroup)) +
+geom_point(alpha = 0.6) +
+geom_text(aes(label = Last), hjust = .5, vjust = -.7, size = 2) +
+ggtitle("2021: OPS vs Batting Average with Age Group as color") +
+labs(color = "Age Group")
+ggplot(MLB2016hittingstats, aes(x = OPS, y = AVG, color = AgeGroup)) +
+geom_point(alpha = 0.6) +
+geom_text(aes(label = Last), hjust = .5, vjust = -.7, size = 2) +
+ggtitle("2016: OPS vs Batting Average with Age Group as color") +
+labs(color = "Age Group")
+ggplot(MLB2021hittingstats, aes(x = HR, y = ..total.., fill = AgeGroup)) +
+geom_dotplot(dotsize = .7, method = "dotdensity", binwidth = NULL)
+ggplot(MLB2021hittingstats, aes(x = HR, fill = AgeGroup)) +
+geom_dotplot(dotsize = .7, method = "dotdensity", binwidth = NULL)
+ggplot(MLB2021hittingstats, aes(x = AgeGroup, y = HR)) +
+geom_dotplot(dotsize = .7, method = "dotdensity", binwidth = NULL)
+ggplot(MLB2021hittingstats, aes(x = AgeGroup, y = HR)) +
+geom_dotplot(dotsize = .7)
+ggplot(MLB2021hittingstats, aes(x = AgeGroup, y = HR)) +
+geom_dotplot()
+ggplot(MLB2021hittingstats, aes(x = AgeGroup, y = HR)) +
+geom_dotplot(binaxis = "y", stackdir = "center")
+ggplot(MLB2021hittingstats, aes(x = AgeGroup, y = HR)) +
+geom_dotplot(binaxis = "y", stackdir = "center", fill = c("violet"))
+ggplot(MLB2021hittingstats, aes(x = AgeGroup, y = HR)) +
+geom_dotplot(binaxis = "y", stackdir = "center", fill = c("violet", "orange", "blue"))
+ggplot(MLB2021hittingstats, aes(x = AgeGroup, y = HR, fill = AgeGroup)) +
+geom_dotplot(binaxis = "y", stackdir = "center") +
+ggplot(MLB2021hittingstats, aes(x = AgeGroup, y = HR, fill = AgeGroup)) +
+geom_dotplot(binaxis = "y", stackdir = "center")
+ggplot(MLB2021hittingstats, aes(x = AgeGroup, y = HR, fill = AgeGroup)) +
+geom_dotplot(binaxis = "y", stackdir = "center") +
+scale_fill_discrete()
+ggplot(MLB2021hittingstats, aes(x = AgeGroup, y = HR, fill = AgeGroup)) +
+geom_dotplot(binaxis = "y", stackdir = "center") +
+guides(fill = "none")
+ggplot(MLB2021hittingstats, aes(x = AgeGroup, y = HR, fill = AgeGroup)) +
+geom_dotplot(binaxis = "y", stackdir = "center") +
+guides(fill = "none") +
+geom_violin(scale = "width", alpha = .5)
+ggplot(MLB2021hittingstats, aes(x = AgeGroup, y = HR, fill = AgeGroup)) +
+geom_dotplot(binaxis = "y", stackdir = "center", dotsize = 0.5) +
+guides(fill = "none") +
+geom_violin(scale = "width", alpha = .5)
+ggplot(MLB2021hittingstats, aes(x = AgeGroup, y = HR, fill = AgeGroup)) +
+geom_dotplot(binaxis = "y", stackdir = "center", dotsize = 0.5, binwidth = 1) +
+guides(fill = "none") +
+geom_violin(scale = "width", alpha = .5)
+ggplot(MLB2021hittingstats, aes(x = AgeGroup, y = HR, fill = AgeGroup)) +
+geom_dotplot(binaxis = "y", stackdir = "center", dotsize = 0.7, binwidth = 1) +
+guides(fill = "none") +
+geom_violin(scale = "width", alpha = .5)
+ggplot(MLB2021hittingstats, aes(x = AgeGroup, y = HR, fill = AgeGroup)) +
+geom_dotplot(binaxis = "y", stackdir = "center", dotsize = 0.8, binwidth = 1) +
+guides(fill = "none") +
+geom_violin(scale = "width", alpha = .5)
+ggplot(MLB2021hittingstats, aes(x = AgeGroup, y = HR, fill = AgeGroup)) +
+geom_dotplot(binaxis = "y", stackdir = "center", binwidth = 1) +
+guides(fill = "none") +
+geom_violin(scale = "width", alpha = .5)
+ggplot(MLB2021hittingstats, aes(x = AgeGroup, y = HR, fill = AgeGroup)) +
+geom_dotplot(binaxis = "y", stackdir = "center", dotsize = .8, binwidth = 1) +
+guides(fill = "none") +
+geom_violin(scale = "width", alpha = .5)
+library(ggradar)
+library(ggplot2)
+library(ggradar)
+devtools::install_github("ricardo-bion/ggradar",
+dependencies = TRUE)
+install_github("ricardo-bion/ggradar",
+dependencies = TRUE)
+install.packages("devtools")
+devtools::install_github("ricardo-bion/ggradar",
+dependencies = TRUE)
+install.packages("devtools")
+install.packages("devtools")
+devtools::install_github("ricardo-bion/ggradar",
+dependencies = TRUE)

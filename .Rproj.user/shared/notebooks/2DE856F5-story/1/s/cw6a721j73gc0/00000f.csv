@@ -1,0 +1,6 @@
+"0","ggplot(MLBallhitting, aes(x = AgeGroup, y = HR, fill = AgeGroup)) +"
+"0","  geom_dotplot(binaxis = ""y"", stackdir = ""center"", dotsize = .8, binwidth = 1) +"
+"0","  guides(fill = ""none"") +"
+"0","  geom_violin(scale = ""width"", alpha = .5) +"
+"0","  xlab(""Age Group"") +"
+"0","  ggtitle(""HR by Age Group: Violin and Dot Plot"")"

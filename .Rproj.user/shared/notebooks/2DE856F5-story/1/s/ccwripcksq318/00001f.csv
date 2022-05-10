@@ -1,0 +1,5 @@
+"0","library(ggcorrplot)"
+"0",""
+"0","corrtotal = round(cor(MLBallhitting[, 4:22]), 2)"
+"0","ggcorrplot(corrtotal, tl.cex = 7, type = ""lower"") +"
+"0","  ggtitle(""Correlation Plot for Hitting Stats from Both Seasons"")"

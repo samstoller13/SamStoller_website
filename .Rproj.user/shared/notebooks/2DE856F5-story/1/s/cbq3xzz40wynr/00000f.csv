@@ -1,0 +1,4 @@
+"0","MLB2021hittingstats = read.csv(""/Users/samstoller/Documents/Data/Final/SamStoller_website/2021hittingstats.csv"")"
+"0","MLB2016hittingstats = read.csv(""/Users/samstoller/Documents/Data/Final/SamStoller_website/2016hittingstats.csv"")"
+"0","MLB2021pitchingstats = read.csv(""/Users/samstoller/Documents/Data/Final/SamStoller_website/2021pitchingstats.csv"")"
+"0","MLB2016pitchingstats = read.csv(""/Users/samstoller/Documents/Data/Final/SamStoller_website/2016pitchingstats.csv"")"

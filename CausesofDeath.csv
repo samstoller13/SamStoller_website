@@ -1,0 +1,67 @@
+﻿Year,CauseDeath,Count
+2015,Heart disease,633842
+2015,Cancer,595930
+2015,COVID-19,0
+2015,Unintentional injuries,146571
+2015,Stroke,140323
+2015,Chonic lower respiratory diseases,155040
+2015,Alzheimer disease,110561
+2015,Diabetes,79535
+2015,Influenza and pneumonia,57062
+2015,Kidney disease,49959
+2015,Suicide,44193
+2016,Heart disease,635260
+2016,Cancer,598038
+2016,COVID-19,0
+2016,Unintentional injuries,161374
+2016,Stroke,142142
+2016,Chonic lower respiratory diseases,154596
+2016,Alzheimer disease,116103
+2016,Diabetes,80058
+2016,Influenza and pneumonia,51537
+2016,Kidney disease,50046
+2016,Suicide,44965
+2017,Heart disease,647457
+2017,Cancer,599108
+2017,COVID-19,0
+2017,Unintentional injuries,169936
+2017,Stroke,146383
+2017,Chonic lower respiratory diseases,160201
+2017,Alzheimer disease,121404
+2017,Diabetes,83564
+2017,Influenza and pneumonia,55672
+2017,Kidney disease,50633
+2017,Suicide,47173
+2018,Heart disease,655381
+2018,Cancer,599274
+2018,COVID-19,0
+2018,Unintentional injuries,167127
+2018,Stroke,147810
+2018,Chonic lower respiratory diseases,159486
+2018,Alzheimer disease,122019
+2018,Diabetes,84946
+2018,Influenza and pneumonia,59120
+2018,Kidney disease,51386
+2018,Suicide,48344
+2019,Heart disease,659041
+2019,Cancer,599601
+2019,COVID-19,0
+2019,Unintentional injuries,173040
+2019,Stroke,150005
+2019,Chonic lower respiratory diseases,156979
+2019,Alzheimer disease,121499
+2019,Diabetes,87647
+2019,Influenza and pneumonia,49783
+2019,Kidney disease,51565
+2019,Suicide,47511
+2020,Heart disease,690882
+2020,Cancer,598932
+2020,COVID-19,345323
+2020,Unintentional injuries,192176
+2020,Stroke,159050
+2020,Chonic lower respiratory diseases,151637
+2020,Alzheimer disease,133382
+2020,Diabetes,101106
+2020,Influenza and pneumonia,53495
+2020,Kidney disease,52260
+2020,Suicide,44834

@@ -1,0 +1,14 @@
+name: "SamStoller_website"
+title: "Sam's Website"
+description: |
+  My Website
+output_dir: "docs"
+navbar:
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "Past Visualizations"
+      href: PastVisualizations.html
+    - text: "Story"
+      href: story.html
+output: distill::distill_article
